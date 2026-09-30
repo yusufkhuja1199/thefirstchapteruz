@@ -1,2 +1,4 @@
 User-agent: *
 Allow: /
+
+Sitemap: https://yusufkhuja1199.github.io/thefirstchapteruz/sitemap.xml
