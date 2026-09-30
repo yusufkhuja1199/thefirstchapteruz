@@ -5,6 +5,12 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title data-i18n="t.contact">Aloqa — The First Chapter</title>
   <meta name="description" content="The First Chapter bilan bog'laning: telefon, Telegram, Instagram va aloqa formasi.">
+  <meta name="theme-color" content="#fbf7f2">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="The First Chapter">
+  <meta property="og:locale" content="uz_UZ">
+  <meta property="og:title" content="Aloqa — The First Chapter">
+  <meta property="og:description" content="The First Chapter bilan bog'laning: telefon, Telegram, Instagram va aloqa formasi.">
   <link rel="icon" href="images/box.svg" type="image/svg+xml">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -73,27 +79,29 @@
 
         <div class="info-box reveal">
           <h3 data-i18n="ct.formT">Bizga yozing</h3>
-          <form class="form" data-validate novalidate>
+          <form class="form" name="aloqa" method="POST" data-netlify="true" netlify-honeypot="bot-field" data-validate novalidate>
+            <input type="hidden" name="form-name" value="aloqa"><input type="hidden" name="til"><input type="hidden" name="sahifa">
+            <p class="hp-field" aria-hidden="true"><label>Bo'sh qoldiring <input name="bot-field" tabindex="-1" autocomplete="off"></label></p>
             <div class="form__row">
               <div class="field">
                 <label for="c-name" data-i18n="ct.name">Ism</label>
-                <input id="c-name" type="text" required>
+                <input id="c-name" name="ism" type="text" autocomplete="name" required>
                 <span class="error-msg" data-i18n="f.nameErr">Ismingizni kiriting</span>
               </div>
               <div class="field">
                 <label for="c-phone" data-i18n="ct.phone">Telefon</label>
-                <input id="c-phone" type="tel" placeholder="+998" required>
+                <input id="c-phone" name="telefon" type="tel" autocomplete="tel" placeholder="+998" required>
                 <span class="error-msg" data-i18n="f.phoneErr">To'g'ri raqam kiriting</span>
               </div>
             </div>
             <div class="field">
               <label for="c-email">Email</label>
-              <input id="c-email" type="email" required>
+              <input id="c-email" name="email" type="email" autocomplete="email" required>
               <span class="error-msg" data-i18n="ct.emailErr">To'g'ri email kiriting</span>
             </div>
             <div class="field">
               <label for="c-topic" data-i18n="ct.topic">Mavzu</label>
-              <select id="c-topic">
+              <select id="c-topic" name="mavzu">
                 <option value="question" data-i18n="ct.top1">Quti haqida savol</option>
                 <option value="custom" data-i18n="ct.top2">Individual buyurtma</option>
                 <option value="delivery" data-i18n="ct.top3">Yetkazib berish</option>
@@ -102,11 +110,12 @@
             </div>
             <div class="field">
               <label for="c-message" data-i18n="ct.msg">Xabar</label>
-              <textarea id="c-message" required></textarea>
+              <textarea id="c-message" name="xabar" required></textarea>
               <span class="error-msg" data-i18n="ct.msgErr">Xabar yozing</span>
             </div>
             <button type="submit" class="btn" data-i18n="ct.send">Yuborish</button>
-            <div class="form-success" data-i18n="ct.success">Rahmat! Xabaringiz yuborildi, tez orada javob beramiz.</div>
+            <div class="form-success" role="status" data-i18n="ct.success">Rahmat! Xabaringiz yuborildi, tez orada javob beramiz.</div>
+            <div class="form-error" role="alert" data-i18n="f.sendErr">Yuborib bo'lmadi. Iltimos, qayta urinib ko'ring yoki bizga Telegram orqali yozing.</div>
           </form>
         </div>
       </div>

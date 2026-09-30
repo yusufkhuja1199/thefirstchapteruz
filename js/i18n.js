@@ -28,6 +28,8 @@ const I18N = {
     "f.commentPh": "Masalan: Oysha, 12.03.2026, Samarqand, pushti rang",
     "modal.submit": "Arizani yuborish",
     "modal.success": "Rahmat! Ariza yuborildi, tez orada siz bilan bog'lanamiz.",
+    "modal.close": "Yopish",
+    "f.sendErr": "Yuborib bo'lmadi. Iltimos, qayta urinib ko'ring yoki bizga Telegram orqali yozing.",
 
     // Mahsulotlar
     "tag.hit": "Xit",
@@ -99,19 +101,16 @@ const I18N = {
     "s.3": "Usta qutini 5–10 ish kunida qo'lda tayyorlaydi.",
     "s.4t": "Yetkazish",
     "s.4": "Quti O'zbekistonga keladi va uni eshigingizgacha yetkazamiz.",
-    "r.eyebrow": "Sharhlar",
-    "r.title": "Onalar nima deydi",
-    "r.1": "«Ichiga bilaguzuk, birinchi paypoqchalar va soch tolasini soldim. Yig'ib turib ko'zimga yosh keldi. Sifati ajoyib!»",
-    "r.1s": "Sofiyaning onasi, Toshkent",
-    "r.2": "«Dugonamga tug'ruqxonadan chiqishiga sovg'a qildim. Qadoqlashi qimmatbaho brendlarnikidek, hamma hayratda qoldi.»",
-    "r.2s": "sovg'a, Samarqand",
-    "r.3": "«Rang va yozuv bo'yicha barcha istaklarimni inobatga olishdi. Quti javonda bezak bo'lib turibdi.»",
-    "r.3s": "Temurning onasi, Namangan",
     "cta.title": "Birinchi bobni abadiy saqlang",
     "cta.text": "Ariza qoldiring — siz bilan bog'lanib, model tanlashga yordam beramiz va shaxsiylashtirishni kelishib olamiz.",
     "cta.btn": "Ariza qoldirish",
 
     // Katalog
+    "t.404": "Sahifa topilmadi — The First Chapter",
+    "nf.title": "Bu sahifa topilmadi",
+    "nf.text": "Havola eskirgan yoki manzilda xato bo'lishi mumkin. Bosh sahifaga qayting yoki katalogni ko'ring.",
+    "nf.home": "Bosh sahifaga",
+
     "t.catalog": "Qutilar katalogi — The First Chapter",
     "c.title": "Qutilar katalogi",
     "c.text": "Barcha modellar buyurtma asosida qo'lda tayyorlanadi. Mato, lenta rangi va yozuvlarni o'zingiz tanlashingiz mumkin. Narxlarga O'zbekistongacha yetkazish kiritilgan.",
@@ -251,6 +250,8 @@ const I18N = {
     "f.commentPh": "Например: Алиса, 12.03.2026, Самарканд, розовый цвет",
     "modal.submit": "Отправить заявку",
     "modal.success": "Спасибо! Заявка отправлена, мы скоро свяжемся с вами.",
+    "modal.close": "Закрыть",
+    "f.sendErr": "Не удалось отправить. Попробуйте ещё раз или напишите нам в Telegram.",
 
     "tag.hit": "Хит",
     "tag.premium": "Премиум",
@@ -320,17 +321,14 @@ const I18N = {
     "s.3": "Мастер создаёт шкатулку вручную за 5–10 рабочих дней.",
     "s.4t": "Доставка",
     "s.4": "Шкатулка приезжает в Узбекистан, и мы доставляем её до вашей двери.",
-    "r.eyebrow": "Отзывы",
-    "r.title": "Что говорят мамы",
-    "r.1": "«Сложила туда бирку, первые пинетки и локон. Плакала, пока собирала. Качество потрясающее!»",
-    "r.1s": "мама Софии, Ташкент",
-    "r.2": "«Заказала в подарок подруге на выписку. Упаковка — как у дорогого бренда, все в восторге.»",
-    "r.2s": "подарок, Самарканд",
-    "r.3": "«Учли все пожелания по цвету и надписи. Шкатулка стоит на полке как украшение.»",
-    "r.3s": "мама Тимура, Наманган",
     "cta.title": "Сохраните первую главу навсегда",
     "cta.text": "Оставьте заявку — мы свяжемся с вами, поможем выбрать модель и согласуем персонализацию.",
     "cta.btn": "Оставить заявку",
+
+    "t.404": "Страница не найдена — The First Chapter",
+    "nf.title": "Такой страницы нет",
+    "nf.text": "Возможно, ссылка устарела или в адресе ошибка. Вернитесь на главную или загляните в каталог.",
+    "nf.home": "На главную",
 
     "t.catalog": "Каталог шкатулок — The First Chapter",
     "c.title": "Каталог шкатулок",
@@ -468,6 +466,8 @@ const I18N = {
     "f.commentPh": "E.g. Alice, 12.03.2026, Samarkand, pink",
     "modal.submit": "Send request",
     "modal.success": "Thank you! Your request has been sent — we'll contact you soon.",
+    "modal.close": "Close",
+    "f.sendErr": "Couldn't send. Please try again or message us on Telegram.",
 
     "tag.hit": "Bestseller",
     "tag.premium": "Premium",
@@ -537,17 +537,14 @@ const I18N = {
     "s.3": "The master handcrafts your box in 5–10 working days.",
     "s.4t": "Delivery",
     "s.4": "The box arrives in Uzbekistan and we deliver it to your door.",
-    "r.eyebrow": "Reviews",
-    "r.title": "What moms say",
-    "r.1": "“I put in the bracelet, first booties and a curl. I cried while filling it. The quality is amazing!”",
-    "r.1s": "Sofia's mom, Tashkent",
-    "r.2": "“Ordered it as a gift for a friend leaving the maternity ward. The packaging feels like a luxury brand — everyone loved it.”",
-    "r.2s": "gift, Samarkand",
-    "r.3": "“They took all my wishes on colour and text into account. The box looks beautiful on the shelf.”",
-    "r.3s": "Timur's mom, Namangan",
     "cta.title": "Keep the first chapter forever",
     "cta.text": "Leave a request — we'll contact you, help you choose a model and agree on personalisation.",
     "cta.btn": "Leave a request",
+
+    "t.404": "Page not found — The First Chapter",
+    "nf.title": "This page doesn't exist",
+    "nf.text": "The link may be outdated or the address mistyped. Go back to the home page or browse the catalog.",
+    "nf.home": "Back to home",
 
     "t.catalog": "Catalog — The First Chapter",
     "c.title": "Keepsake box catalog",
@@ -685,6 +682,10 @@ function setLang(lang) {
     const value = dict[el.dataset.i18nAlt];
     if (value !== undefined) el.alt = value;
   });
+  document.querySelectorAll("[data-i18n-aria]").forEach((el) => {
+    const value = dict[el.dataset.i18nAria];
+    if (value !== undefined) el.setAttribute("aria-label", value);
+  });
   document.documentElement.lang = lang;
   document.querySelectorAll("[data-lang]").forEach((btn) => {
     btn.classList.toggle("active", btn.dataset.lang === lang);
@@ -693,9 +694,9 @@ function setLang(lang) {
   try { localStorage.setItem("tfc-lang", lang); } catch (e) { /* e'tiborsiz */ }
 }
 
-document.addEventListener("DOMContentLoaded", () => {
-  document.querySelectorAll("[data-lang]").forEach((btn) => {
-    btn.addEventListener("click", () => setLang(btn.dataset.lang));
-  });
-  setLang(getLang());
+// Skript <body> oxirida ulanadi — sahifa allaqachon o'qilgan, shuning uchun
+// tilni darhol qo'llaymiz (o'zbekcha matn bir lahza ko'rinib qolmasligi uchun)
+document.querySelectorAll("[data-lang]").forEach((btn) => {
+  btn.addEventListener("click", () => setLang(btn.dataset.lang));
 });
+setLang(getLang());

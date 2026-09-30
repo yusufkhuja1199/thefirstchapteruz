@@ -266,6 +266,14 @@ p { margin: 0 0 1em; }
   padding: 16px 20px; border-radius: 12px; font-weight: 600;
 }
 .form-success.show { display: block; }
+.form-error {
+  display: none; background: #fbeeee; border: 1px solid #e8b9b9; color: #9b3f3f;
+  padding: 16px 20px; border-radius: 12px; font-weight: 600;
+}
+.form-error.show { display: block; }
+.btn:disabled { opacity: .6; cursor: wait; transform: none; }
+.hp-field { position: absolute; left: -9999px; width: 1px; height: 1px; overflow: hidden; }
+:focus-visible { outline: 2px solid var(--rose-dark); outline-offset: 3px; }
 
 .contact-item { display: flex; gap: 16px; margin-bottom: 22px; }
 .contact-item .feature__icon { margin: 0; width: 52px; height: 52px; flex-shrink: 0; }
@@ -289,6 +297,12 @@ p { margin: 0 0 1em; }
   font-size: 1.8rem; cursor: pointer; color: var(--muted); line-height: 1;
 }
 @keyframes pop { from { transform: scale(.95); opacity: 0; } to { transform: none; opacity: 1; } }
+
+/* 404 */
+.not-found { text-align: center; max-width: 560px; }
+.not-found img { margin: 0 auto 8px; }
+.not-found__code { font-family: var(--serif); font-size: 4rem; line-height: 1; color: var(--rose-dark); margin-bottom: 8px; }
+.not-found .hero__actions { justify-content: center; }
 
 /* Подвал */
 .footer { background: var(--ink); color: #d9cfc9; padding: 64px 0 28px; margin-top: 0; }

@@ -5,6 +5,12 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title data-i18n="t.home">The First Chapter — bolalik xotiralari qutisi</title>
   <meta name="description" content="The First Chapter — chaqaloqlikning ilk buyumlarini saqlash uchun qo'lda yasalgan xotira qutilari. O'zbekiston bo'ylab yetkazib berish.">
+  <meta name="theme-color" content="#fbf7f2">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="The First Chapter">
+  <meta property="og:locale" content="uz_UZ">
+  <meta property="og:title" content="The First Chapter — bolalik xotiralari qutisi">
+  <meta property="og:description" content="The First Chapter — chaqaloqlikning ilk buyumlarini saqlash uchun qo'lda yasalgan xotira qutilari. O'zbekiston bo'ylab yetkazib berish.">
   <link rel="icon" href="images/box.svg" type="image/svg+xml">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -166,30 +172,6 @@
       </div>
     </section>
 
-    <!-- Sharhlar -->
-    <section class="section section--sand">
-      <div class="container">
-        <div class="section-head reveal">
-          <span class="eyebrow" data-i18n="r.eyebrow">Sharhlar</span>
-          <h2 data-i18n="r.title">Onalar nima deydi</h2>
-        </div>
-        <div class="grid grid--3">
-          <div class="review reveal">
-            <blockquote data-i18n="r.1">«Ichiga bilaguzuk, birinchi paypoqchalar va soch tolasini soldim. Yig'ib turib ko'zimga yosh keldi. Sifati ajoyib!»</blockquote>
-            <cite>Madina<span data-i18n="r.1s">Sofiyaning onasi, Toshkent</span></cite>
-          </div>
-          <div class="review reveal">
-            <blockquote data-i18n="r.2">«Dugonamga tug'ruqxonadan chiqishiga sovg'a qildim. Qadoqlashi qimmatbaho brendlarnikidek, hamma hayratda qoldi.»</blockquote>
-            <cite>Dilnoza<span data-i18n="r.2s">sovg'a, Samarqand</span></cite>
-          </div>
-          <div class="review reveal">
-            <blockquote data-i18n="r.3">«Rang va yozuv bo'yicha barcha istaklarimni inobatga olishdi. Quti javonda bezak bo'lib turibdi.»</blockquote>
-            <cite>Nigora<span data-i18n="r.3s">Temurning onasi, Namangan</span></cite>
-          </div>
-        </div>
-      </div>
-    </section>
-
     <!-- CTA -->
     <section class="section">
       <div class="container">
@@ -234,23 +216,25 @@
   <!-- Buyurtma oynasi -->
   <div class="modal" id="order-modal" role="dialog" aria-modal="true" aria-labelledby="order-title">
     <div class="modal__box">
-      <button class="modal__close" aria-label="×">&times;</button>
+      <button class="modal__close" aria-label="Yopish" data-i18n-aria="modal.close">&times;</button>
       <h2 id="order-title" data-i18n="modal.title">Quti uchun ariza</h2>
       <p class="muted" data-i18n="modal.sub">Bir kun ichida siz bilan bog'lanamiz.</p>
-      <form class="form" data-validate novalidate>
+      <form class="form" name="buyurtma" method="POST" data-netlify="true" netlify-honeypot="bot-field" data-validate novalidate>
+        <input type="hidden" name="form-name" value="buyurtma"><input type="hidden" name="til"><input type="hidden" name="sahifa">
+        <p class="hp-field" aria-hidden="true"><label>Bo'sh qoldiring <input name="bot-field" tabindex="-1" autocomplete="off"></label></p>
         <div class="field">
           <label for="order-name" data-i18n="f.name">Ismingiz</label>
-          <input id="order-name" type="text" required>
+          <input id="order-name" name="ism" type="text" autocomplete="name" required>
           <span class="error-msg" data-i18n="f.nameErr">Ismingizni kiriting</span>
         </div>
         <div class="field">
           <label for="order-phone" data-i18n="f.phone">Telefon</label>
-          <input id="order-phone" type="tel" placeholder="+998" required>
+          <input id="order-phone" name="telefon" type="tel" autocomplete="tel" placeholder="+998" required>
           <span class="error-msg" data-i18n="f.phoneErr">To'g'ri raqam kiriting</span>
         </div>
         <div class="field">
           <label for="order-product" data-i18n="f.model">Model</label>
-          <select id="order-product">
+          <select id="order-product" name="model">
             <option value="" data-i18n="f.none">Hali tanlamadim</option>
             <option value="classic" data-i18n="p.classic">Klassik quti</option>
             <option value="mini" data-i18n="p.mini">Mini-quti</option>
@@ -262,10 +246,11 @@
         </div>
         <div class="field">
           <label for="order-comment" data-i18n="f.comment">Chaqaloq ismi, shahar va istaklaringiz</label>
-          <textarea id="order-comment" placeholder="Masalan: Oysha, 12.03.2026, Samarqand, pushti rang" data-i18n-placeholder="f.commentPh"></textarea>
+          <textarea id="order-comment" name="izoh" placeholder="Masalan: Oysha, 12.03.2026, Samarqand, pushti rang" data-i18n-placeholder="f.commentPh"></textarea>
         </div>
         <button type="submit" class="btn" data-i18n="modal.submit">Arizani yuborish</button>
-        <div class="form-success" data-i18n="modal.success">Rahmat! Ariza yuborildi, tez orada siz bilan bog'lanamiz.</div>
+        <div class="form-success" role="status" data-i18n="modal.success">Rahmat! Ariza yuborildi, tez orada siz bilan bog'lanamiz.</div>
+        <div class="form-error" role="alert" data-i18n="f.sendErr">Yuborib bo'lmadi. Iltimos, qayta urinib ko'ring yoki bizga Telegram orqali yozing.</div>
       </form>
     </div>
   </div>
