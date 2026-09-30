@@ -1,6 +1,7 @@
 // The First Chapter — umumiy skript
-// Arizalar Netlify Forms'ga yuboriladi. GitHub Pages'dan ham shu manzilga boradi.
-const FORMS_ENDPOINT = "https://thefirstchapteruz.netlify.app/";
+// Arizalar Netlify Forms'ga yuboriladi. Netlify sahifalari GitHub Pages'ga yo'naltirilgan,
+// shuning uchun arizalar yo'naltirishdan istisno qilingan /ariza.html manziliga boradi (_redirects).
+const FORMS_ENDPOINT = "https://thefirstchapteruz.netlify.app/ariza.html";
 
 document.addEventListener("DOMContentLoaded", () => {
   // Mobil menyu
@@ -122,7 +123,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
       try {
         const sameSite = location.hostname === new URL(FORMS_ENDPOINT).hostname;
-        const res = await fetch(sameSite ? "/" : FORMS_ENDPOINT, {
+        const res = await fetch(sameSite ? new URL(FORMS_ENDPOINT).pathname : FORMS_ENDPOINT, {
           method: "POST",
           headers: { "Content-Type": "application/x-www-form-urlencoded" },
           body: data.toString(),
