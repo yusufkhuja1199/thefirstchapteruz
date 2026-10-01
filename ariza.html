@@ -5,10 +5,23 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="robots" content="noindex">
   <title>Ariza qabul qilindi — The First Chapter</title>
-  <!-- Bu sahifa faqat arizalarni Netlify Forms'ga qabul qilish uchun. Oddiy ochilganda saytga qaytaradi. -->
-  <meta http-equiv="refresh" content="0; url=https://yusufkhuja1199.github.io/thefirstchapteruz/">
+  <!-- Arizalar shu manzilga (Netlify) yuboriladi. Quyidagi yashirin formalar Netlify
+       formalarni aniqlashi uchun kerak — maydon nomlari asosiy saytdagi formalar bilan bir xil. -->
+  <meta http-equiv="refresh" content="0; url=https://thefirstchapteruz.github.io/">
 </head>
 <body>
-  <p>Rahmat! Arizangiz qabul qilindi. <a href="https://yusufkhuja1199.github.io/thefirstchapteruz/">Saytga qaytish</a></p>
+  <p>Rahmat! Arizangiz qabul qilindi. <a href="https://thefirstchapteruz.github.io/">Saytga qaytish</a></p>
+
+  <form name="buyurtma" method="POST" data-netlify="true" netlify-honeypot="bot-field" hidden>
+    <input type="hidden" name="form-name" value="buyurtma">
+    <input name="til"><input name="sahifa"><input name="bot-field">
+    <input name="ism"><input name="telefon"><input name="model"><textarea name="izoh"></textarea>
+  </form>
+
+  <form name="aloqa" method="POST" data-netlify="true" netlify-honeypot="bot-field" hidden>
+    <input type="hidden" name="form-name" value="aloqa">
+    <input name="til"><input name="sahifa"><input name="bot-field">
+    <input name="ism"><input name="telefon"><input name="email"><input name="mavzu"><textarea name="xabar"></textarea>
+  </form>
 </body>
 </html>
